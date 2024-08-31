@@ -15,8 +15,10 @@ console.log(lastLetter + ' ' + thirdLetter) // t
 let lastIndex = string.length - 1
 console.log(lastIndex) // 9
 console.log(string[lastIndex]) // t
-
+console.log(string[lastIndex]) // t
 // let lastIndex = string.length - 2
 // console.log(lastIndex)
 // console.log(string[lastIndex])
+
+
 
