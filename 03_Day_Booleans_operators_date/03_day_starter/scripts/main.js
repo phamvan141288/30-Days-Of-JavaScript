@@ -95,5 +95,36 @@
 // console.log( 4 > 3 && 10 > 12);
 // console.log( 4 > 3 || 10 < 12);
 // console.log('dragon'.length !== 'python'.length);
-const now = new Date()
-console.log (now.getTime());
+// const now = new Date()
+// console.log (now.getTime());
+
+/*
+7. Use the Date object to do the following activities
+   1. What is the year today?
+   2. What is the month today as a number?
+   3. What is the date today?
+   4. What is the day today as a number?
+   5. What is the hours now?
+   6. What is the minutes now?
+   7. Find out the numbers of seconds elapsed from January 1, 1970 to now.
+
+
+*/
+
+// const thoigian =  new Date()
+// const months = [
+//   "January", "February", "March", "April", "May", "June", 
+//   "July", "August", "September", "October", "November", "December"
+// ];
+// console.log(thoigian.getFullYear())
+// console.log(months[thoigian.getMonth()]) // truyền 1 biến vào để show kết quả hiện thị thì dùng dấu [] này để lấy giá trị hiện tại về
+// // trong khi đó khi khai báo biến months là một biến string
+// console.log(months[9]) // vì giá trị khai báo là một mảng chứa trong đó là string nên khi đưa giá trị theo số thứ tự mảng nó sẽ xuất hiện kết quả
+// console.log(thoigian.getDate()-2)
+// console.log(thoigian.getTime())
+// console.log(thoigian.getHours())
+// console.log(thoigian.getMinutes())
+const now = new Date();
+const secondsElapsed = Math.floor(now.getTime() / 1000);
+console.log(secondsElapsed.toLocaleString()); // dùng định dạng toLocalString() để đổi định dang sang dấu `,`
+console.log(secondsElapsed.toLocaleString('de-DE')); // dùng toLocaleString(`de-DE`) đổi định dạng sang dấu `.`
