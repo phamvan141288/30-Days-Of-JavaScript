@@ -124,7 +124,78 @@
 // console.log(thoigian.getTime())
 // console.log(thoigian.getHours())
 // console.log(thoigian.getMinutes())
-const now = new Date();
-const secondsElapsed = Math.floor(now.getTime() / 1000);
-console.log(secondsElapsed.toLocaleString()); // dùng định dạng toLocalString() để đổi định dang sang dấu `,`
-console.log(secondsElapsed.toLocaleString('de-DE')); // dùng toLocaleString(`de-DE`) đổi định dạng sang dấu `.`
+// const now = new Date();
+// const secondsElapsed = Math.floor(now.getTime() / 1000);
+// console.log(secondsElapsed.toLocaleString()); // dùng định dạng toLocalString() để đổi định dang sang dấu `,`
+// console.log(secondsElapsed.toLocaleString('de-DE')); // dùng toLocaleString(`de-DE`) đổi định dạng sang dấu `.`
+
+// Bài tập 2
+/**
+ Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+
+   ```sh
+   Enter base: 20
+   Enter height: 10
+   The area of the triangle is 100
+ */
+
+   // let base = prompt("Enter base: ")
+   // let height = prompt("Enter height: ")
+   // let result = base*height*2
+
+   // console.log("The area of the triangle is" + " " + result);
+
+/**
+ * 1. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+
+   ```sh
+   Enter side a: 5
+   Enter side b: 4
+   Enter side c: 3
+   The perimeter of the triangle is 12
+//  */
+// let a = prompt("Enter side a: ")
+// let b = prompt("Enter side b: ")
+// let c = prompt("Enter side c: ")
+// let result = a + b + c;
+// console.log("The perimeter of the triangle is: ", result);
+
+/**
+ * 
+1. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+1. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+1. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+1. Slope is m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>). Find the slope between point (2, 2) and point(6,10)
+1. Compare the slope of above two questions.
+1. Calculate the value of y (y = x<sup>2</sup> + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+ */
+
+//  let length = prompt("Enter the length: ")
+//  let width = prompt("Enter the width: ")
+//  let area = length*width;
+//  console.log("Area of rectangle is: ", area)
+
+// let r = prompt("Enter the r of circle: ")
+// let AreaResult = 3.14 * r * r;
+// let circumferenceResult = 2*3.14*r;
+// console.log("The result of area is: ", AreaResult );
+// console.group("The result of circumference is: ", circumferenceResult);
+
+/**
+ * 1. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+
+    ```sh
+    Enter hours: 40
+    Enter rate per hour: 28
+    Your weekly earning is 1120
+
+    8 * 28 = 1 day
+    40 * 28 
+
+    ```
+ */
+
+let hour = prompt("Enter hours: ")
+let rate = prompt("Enter rate per hour: ")
+let earn = (hour*rate)*5;
+console.log(`Your weekly earning is ${earn}`)
