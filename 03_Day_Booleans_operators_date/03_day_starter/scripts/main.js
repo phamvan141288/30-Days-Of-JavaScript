@@ -195,7 +195,44 @@
     ```
  */
 
-let hour = prompt("Enter hours: ")
-let rate = prompt("Enter rate per hour: ")
-let earn = (hour*rate)*5;
-console.log(`Your weekly earning is ${earn}`)
+// let hour = prompt("Enter hours a day: ")
+// let rate = prompt("Enter rate per hour a day: ")
+// let earn = (hour*rate)*5;
+// console.log(`Your weekly earning is ${earn}`)
+
+/**
+ * 1. If the length of your name is greater than 7 say, your name is long else say your name is short.
+1. Compare your first name length and your family name length and you should get this output.
+
+    ```js
+    let firstName = 'Asabeneh'
+    let lastName = 'Yetayeh'
+    ```
+
+    ```sh
+    Your first name, Asabeneh is longer than your family name, Yetayeh
+    ```
+ */
+
+// let yournName = prompt("Enter your name: ")
+// if (yournName.length > 7) {
+//    // console.log(`Your name is long with ${yournName.length} characters`)
+   
+//    document.getElementById("ten").innerHTML = `Your name is long with ${yournName.length} characters`;
+
+// } else {
+//    // console.log(`Your name is short with ${yournName.length} characters`)
+//    document.getElementById("ten").innerHTML = `Your name is short with ${yournName.length} characters`;
+// }
+
+let firstName = prompt("Enter your first name: ")
+let lastName = prompt("Enter your last name: ")
+if (firstName.length > lastName.length) {
+   // console.log(`Your name is long with ${yournName.length} characters`)
+   
+   document.getElementById("ten").innerHTML = `Your first name: ${firstName} is longer than your last name: ${lastName} `;
+
+} else {
+   // console.log(`Your name is short with ${yournName.length} characters`)
+   document.getElementById("ten").innerHTML = `Your first name: ${firstName} is short than your last name: ${lastName} `;
+}
