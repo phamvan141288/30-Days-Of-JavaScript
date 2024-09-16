@@ -225,14 +225,39 @@
 //    document.getElementById("ten").innerHTML = `Your name is short with ${yournName.length} characters`;
 // }
 
-let firstName = prompt("Enter your first name: ")
-let lastName = prompt("Enter your last name: ")
-if (firstName.length > lastName.length) {
-   // console.log(`Your name is long with ${yournName.length} characters`)
+// let firstName = prompt("Enter your first name: ")
+// let lastName = prompt("Enter your last name: ")
+// if (firstName.length > lastName.length) {
+//    // console.log(`Your name is long with ${yournName.length} characters`)
    
-   document.getElementById("ten").innerHTML = `Your first name: ${firstName} is longer than your last name: ${lastName} `;
+//    document.getElementById("ten").innerHTML = `Your first name: ${firstName} is longer than your last name: ${lastName} `;
 
-} else {
-   // console.log(`Your name is short with ${yournName.length} characters`)
-   document.getElementById("ten").innerHTML = `Your first name: ${firstName} is short than your last name: ${lastName} `;
-}
+// } else {
+//    // console.log(`Your name is short with ${yournName.length} characters`)
+//    document.getElementById("ten").innerHTML = `Your first name: ${firstName} is short than your last name: ${lastName} `;
+// }
+
+// const thoigian = new Date()
+// // console.log(thoigian.getFullYear())
+// let yourAge = prompt("Enter your year age: ")
+// let result = thoigian.getFullYear() - yourAge
+// let drink = 18 - result
+// result > 18
+//  ? document.getElementById("ten").innerHTML = `You are ${result} <br> => you can drink beer <br> you have to wait until ${drink} years to drink`
+//  : document.getElementById("ten").innerHTML = `You are ${result} <br> => you can not drink beer <br> you have to wait until ${drink} years to drink`
+
+const now = new Date();
+
+// Helper function to format numbers to 2 digits
+const formatTwoDigits = (num) => (num < 10 ? `0${num}` : num);
+
+// Extract date components
+const year = now.getFullYear();
+const month = formatTwoDigits(now.getMonth() + 1); // getMonth() returns 0-11
+const day = formatTwoDigits(now.getDate());
+const hours = formatTwoDigits(now.getHours());
+const minutes = formatTwoDigits(now.getMinutes());
+
+// 1. YYYY-MM-DD HH:mm
+const format1 = `${year}-${month}-${day} ${hours}:${minutes}`;
+console.log("Format 1:", format1);
