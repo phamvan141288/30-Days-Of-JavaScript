@@ -246,18 +246,41 @@
 //  ? document.getElementById("ten").innerHTML = `You are ${result} <br> => you can drink beer <br> you have to wait until ${drink} years to drink`
 //  : document.getElementById("ten").innerHTML = `You are ${result} <br> => you can not drink beer <br> you have to wait until ${drink} years to drink`
 
-const now = new Date();
+// const now = new Date();
 
-// Helper function to format numbers to 2 digits
-const formatTwoDigits = (num) => (num < 10 ? `0${num}` : num);
+// // Helper function to format numbers to 2 digits
+// const formatTwoDigits = (num) => (num < 10 ? `0${num}` : num);
 
-// Extract date components
-const year = now.getFullYear();
-const month = formatTwoDigits(now.getMonth() + 1); // getMonth() returns 0-11
-const day = formatTwoDigits(now.getDate());
-const hours = formatTwoDigits(now.getHours());
-const minutes = formatTwoDigits(now.getMinutes());
+// // Extract date components
+// const year = now.getFullYear();
+// const month = formatTwoDigits(now.getMonth() + 1); // getMonth() returns 0-11
+// const day = formatTwoDigits(now.getDate());
+// const hours = formatTwoDigits(now.getHours());
+// const minutes = formatTwoDigits(now.getMinutes());
 
-// 1. YYYY-MM-DD HH:mm
-const format1 = `${year}-${month}-${day} ${hours}:${minutes}`;
-console.log("Format 1:", format1);
+// // 1. YYYY-MM-DD HH:mm
+// const format1 = `${year}-${month}-${day} ${hours}:${minutes}`;
+// console.log("Format 1:", format1);
+
+// Ngày mai học tiếp phần trên, khá là thú vị và có nhiều áp dụng thực tiễn
+const now =  new Date();
+const formatTwoDigits = (num) => (num < 10 ?`0${num}` : num );
+const formatThreeDigits = (num) => (num < 1000 ?`${num / 10}` : num );
+ const Loop = () =>  {
+   const now =  new Date();
+   const year = now.getFullYear();
+   const month = formatTwoDigits(now.getMonth()+ 1);
+   const day = formatTwoDigits(now.getDate());
+   const hour = formatTwoDigits(now.getHours());
+   const minutes = formatTwoDigits(now.getMinutes());
+   const seconds = formatTwoDigits(now.getSeconds());
+   // const miliseconds = (now.getMilliseconds());
+
+   const format1 = `${year}-${month}-${day} ${hour}: ${minutes}:${seconds}` ;
+   // process.stdout.write(`\r${format1}`);
+   // const format2 = `${miliseconds}`;
+   // console.log(format1);
+   // console.log(format2);
+   document.getElementById('ten').textContent = format1;
+ }
+ setInterval(Loop, 500);
