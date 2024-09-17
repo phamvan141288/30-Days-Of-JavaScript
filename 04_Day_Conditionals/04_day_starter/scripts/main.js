@@ -45,16 +45,18 @@
 //     console.log('It is not a week day.')
 // }
 
-let language = prompt("Enter your language: ")
-let word = language.toLocaleLowerCase();
+// let language = prompt("Enter your language: ")
+// let word = language.toLocaleLowerCase();
 
-switch(word) {
-    case 'english':
-        console.log(`${language} is english`)
-        break
-    case 'korean':
-        console.log(`${language} is korean`)
-        break
-    default:
-        console.log('It is not a language')
-}
+// switch(word) {
+//     case 'english':
+//         console.log(`${language} is english`)
+//         break
+//     case 'korean':
+//         console.log(`${language} is korean`)
+//         break
+//     default:
+//         console.log('It is not a language')
+// }
+
+// Lam bai tap nhe
