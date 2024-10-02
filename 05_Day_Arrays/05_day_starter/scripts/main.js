@@ -1,6 +1,4 @@
-// console.log(countries)
-// alert('Open the browser console whenever you work on JavaScript')
-// alert('Open the console and check if the countries has been loaded')
+
 
 // const arr = [
 //     'Asabeneh',
@@ -19,13 +17,56 @@
 // const numbers = [0, 3.14, 9.81, 37, 98.6, 100] 
 // console.log('Numbers are: ', numbers
 
-const ten = 'PhamKhacVan'
-const char = ten.split('')
-console.log(char.indexOf('P'));
-// console.log(ten.slice(0, 5));
+// const ten = 'PhamKhacVan'
+// const char = ten.split('')
+// console.log(char.indexOf('P'));
+// // console.log(ten.slice(0, 5));
 
 
 // let js = 'JavaScript'
 // const charsInJavaScript = js.split('')
 
 // console.log(charsInJavaScript) // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+
+const country = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+  ]
+  
+  
+  const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+  ]
+
+  const empty = [
+    'VAN',
+    'PHAM',]
+// //   console.log(empty)
+//   if(empty.length >= 3) {
+//      console.log(empty)
+//   } if (webTechs.length >= 3){
+//     console.log(webTechs)
+//   } if (country.length >= 3){
+//     console.log(country)
+//   } else {
+//     console.log("Không thoả mãn")
+//   }
+
+console.log(empty.length)
+console.log(webTechs.length)
+console.log(country.length)
