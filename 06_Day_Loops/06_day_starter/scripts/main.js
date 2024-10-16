@@ -104,23 +104,54 @@
 //     9    81    729
 //     10   100   1000
 //    ```
+
+//7. Use for loop to iterate from 0 to 100 and print only even numbers
+//8. Use for loop to iterate from 0 to 100 and print only odd numbers
+//9. Use for loop to iterate from 0 to 100 and print only prime numbers
+//10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 console.log('i i^2 i^3');
-for (let i =0 ; i <= 10; i++) {
-//     // if ( i % 2 === 0) {
+// let sum = 0; khi tính tổng trong vòng lặp của 1 hàm là phép toán tử (khác với toán hạng) vì nếu không khai báo thì giá trị nó sẽ
+// biểu thị là unidentified nên phải khai báo cho nó 1 giá trị, phép tính trong vòng lặp sum += i là dùng để thực hiện phép tính
+// sum chạy liên tục , tức là phép toán tử gán cho nó chạy liên tục kết quả sum mà bắt đầu là kết quả là sum = 0;
+for (let i =0 ; i <= 100; i++) {
+     console.log(i);
+     sum += i;
+}
+     console.log(`Total numbers are ${sum}`)
+     
+    
+    // if (i % 2 !== 0 || i == 2) {
+    //     console.log(`Prime number: ${i}`)
+    // }
+    
+    
+    // if ( i % 2 !== 0) {
+    //     console.log(i);
+    // }
+    
+    
+    // if(i % 2 === 0){
+    //     console.log(i)
+    // }
+
+
+
+
+    //     // if ( i % 2 === 0) {
 //     //     console.log(i);
 //     // }
 
     // if ( i % 2 !== 0) {
     //     console.log(i);
     // }
-    if (i % i !== 0 || i / 1 !== i) {
-        console.log(i);
-    } else  {
+    // if (i % i !== 0 || i / 1 !== i) {
+    //     console.log(i);
+    // } else  {
         
-    }
+    
     
     // console.log(`${i}  ${i**2} ${i**3}`);
-}
+
 
 // chia hết cho chính nó
 // chi hết cho 1
