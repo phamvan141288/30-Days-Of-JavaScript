@@ -113,11 +113,30 @@ console.log('i i^2 i^3');
 // let sum = 0; khi tính tổng trong vòng lặp của 1 hàm là phép toán tử (khác với toán hạng) vì nếu không khai báo thì giá trị nó sẽ
 // biểu thị là unidentified nên phải khai báo cho nó 1 giá trị, phép tính trong vòng lặp sum += i là dùng để thực hiện phép tính
 // sum chạy liên tục , tức là phép toán tử gán cho nó chạy liên tục kết quả sum mà bắt đầu là kết quả là sum = 0;
-for (let i =0 ; i <= 100; i++) {
-     console.log(i);
-     sum += i;
+// 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+// 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+sum1 = 0;
+sum2 = 0;
+arr1 =[];
+arr2 =[];
+for (let i = 0 ; i <= 100; i++) {
+    console.log(i);
+    
+    if(i % 2 !== 0) {
+       sum1 += i;
+    } else {
+       sum2 += i;
+         }
+   
 }
-     console.log(`Total numbers are ${sum}`)
+arr1.push(sum1);
+arr2.push(sum2);
+console.log(`Total odds number are ${sum1}`)
+console.log(`Total even number are ${sum2}`)
+console.log(`Total odds number as array are:`, arr1)
+console.log(`Total odds number as array are:`,  arr2)
+
+    //  console.log(`Total numbers are ${sum}`)
      
     
     // if (i % 2 !== 0 || i == 2) {
