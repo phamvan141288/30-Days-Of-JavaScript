@@ -109,32 +109,86 @@
 //8. Use for loop to iterate from 0 to 100 and print only odd numbers
 //9. Use for loop to iterate from 0 to 100 and print only prime numbers
 //10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
-console.log('i i^2 i^3');
+// console.log('i i^2 i^3');
 // let sum = 0; khi tính tổng trong vòng lặp của 1 hàm là phép toán tử (khác với toán hạng) vì nếu không khai báo thì giá trị nó sẽ
 // biểu thị là unidentified nên phải khai báo cho nó 1 giá trị, phép tính trong vòng lặp sum += i là dùng để thực hiện phép tính
 // sum chạy liên tục , tức là phép toán tử gán cho nó chạy liên tục kết quả sum mà bắt đầu là kết quả là sum = 0;
 // 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 // 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+// 13. Develop a small script which generate array of 5 random numbers
+// 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+// 15. Develop a small script which generate a six characters random id:
+
+//     ```sh
+//     5j2khz
+
 sum1 = 0;
 sum2 = 0;
-arr1 =[];
-arr2 =[];
-for (let i = 0 ; i <= 100; i++) {
-    console.log(i);
+let arr1 =[];
+let uniqueNum = [];
+
+// arr2 =[];
+// for (let i = 0 ; i < 5; i++) {
+function generateUniqueNumbers() { 
+        while (uniqueNum.length < 5) {
+            randomNum = Math.floor(Math.random()*100);
+        
+            if(!uniqueNum.includes(randomNum)){
+                 uniqueNum.push(randomNum);
+                }
+
+        }
+
+    console.log(`Result`, uniqueNum);
+    }   
+// Set interval to call the function every 1 second (1000 milliseconds)
+let intervalId = setInterval(() => {
+    uniqueNum = []; // Clear the array before generating new numbers
+    generateUniqueNumbers();
+
+    // Optional: stop the interval after showing results 5 times
+    // if (--counter === 0) clearInterval(intervalId);
+}, 1000);
+// let uniqueNum = []; // Array to store unique random numbers
+
+// Function to generate unique random numbers
+// function generateUniqueNumbers() { 
+//     while (uniqueNum.length < 10) {
+//         let randomNum = Math.floor(Math.random() * 100); // Generate a random number between 0 and 99
+        
+//         // Check if the random number is not already in the array
+//         if (!uniqueNum.includes(randomNum)) {
+//             uniqueNum.push(randomNum); // Add the random number to the array if it's not already present
+//         }
+//     }
+
+//     // Output the array of unique random numbers
+//     console.log("Result:", uniqueNum);
+// }   
+
+// // Set interval to call the function every 1 second (1000 milliseconds)
+// let intervalId = setInterval(() => {
+//     uniqueNum = []; // Clear the array before generating new numbers
+//     generateUniqueNumbers(); // Call the function to generate new random numbers
+
+//     // Optional: stop the interval after showing results 5 times
+//     // if (--counter === 0) clearInterval(intervalId);
+// }, 1000);
+
     
-    if(i % 2 !== 0) {
-       sum1 += i;
-    } else {
-       sum2 += i;
-         }
+    // if(i % 2 === 0) {x   
+    //    sum1 += i;
+    //    console.log(arr1)
+    // } else {
+    //    sum2 += i;
+        //  }
    
-}
-arr1.push(sum1);
-arr2.push(sum2);
-console.log(`Total odds number are ${sum1}`)
-console.log(`Total even number are ${sum2}`)
-console.log(`Total odds number as array are:`, arr1)
-console.log(`Total odds number as array are:`,  arr2)
+// arr1.push(sum1);
+// arr2.push(sum2);
+// console.log(`Total odds number are ${sum1}`)
+// console.log(`Total even number are ${sum2}`)
+// console.log(`Total odds number as array are:`, arr1)
+// console.log(`Total odds number as array are:`,  arr2)
 
     //  console.log(`Total numbers are ${sum}`)
      
