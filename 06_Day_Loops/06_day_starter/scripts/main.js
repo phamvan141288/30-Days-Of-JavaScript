@@ -122,33 +122,54 @@
 //     ```sh
 //     5j2khz
 
-sum1 = 0;
-sum2 = 0;
-let arr1 =[];
+// sum1 = 0;
+// sum2 = 0;
 let uniqueNum = [];
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // arr2 =[];
-// for (let i = 0 ; i < 5; i++) {
-function generateUniqueNumbers() { 
-        while (uniqueNum.length < 5) {
-            randomNum = Math.floor(Math.random()*100);
-        
-            if(!uniqueNum.includes(randomNum)){
-                 uniqueNum.push(randomNum);
-                }
+for (let i = 0 ; i <= 9; i++) {
+    uniqueNum.push(i.toString());
+}
 
-        }
+for (let i = 0 ; i < alphabet.length; i++) {
+    uniqueNum.push(alphabet[i]);
+}
+console.log(`Result`, uniqueNum);
 
-    console.log(`Result`, uniqueNum);
-    }   
-// Set interval to call the function every 1 second (1000 milliseconds)
+// Khởi tạo hàm chạy chạy ra ID random
+function generateRandomId(length = 6) {
+    let randomId = '';
+    for (let i = 0; i < length; i++) {
+        // Get a random index from the uniqueNum array
+        let randomIndex = Math.floor(Math.random() * uniqueNum.length); // nhớ đây là hàm chạy thuật toán hiện random
+        // Append the corresponding character to the randomId string
+        randomId += uniqueNum[randomIndex];
+    }
+    return randomId;
+}
+
+// Generate and display a random ID
+// let randomId = generateRandomId();
+// console.log(`Generated Random ID:`, randomId);
+
 let intervalId = setInterval(() => {
-    uniqueNum = []; // Clear the array before generating new numbers
-    generateUniqueNumbers();
+    // Generate a new random ID and display it
+    let randomId = generateRandomId();
+    console.log(`Generated Random ID:`, randomId);
+
+}, 1000);
+        
+
+ 
+// Set interval to call the function every 1 second (1000 milliseconds)
+// let intervalId = setInterval(() => {
+//     uniqueNum = []; // Clear the array before generating new numbers
+//     generateUniqueNumbers();
 
     // Optional: stop the interval after showing results 5 times
     // if (--counter === 0) clearInterval(intervalId);
-}, 1000);
+// }, 1000);
 // let uniqueNum = []; // Array to store unique random numbers
 
 // Function to generate unique random numbers
