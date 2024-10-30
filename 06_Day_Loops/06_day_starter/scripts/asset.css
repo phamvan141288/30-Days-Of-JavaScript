@@ -1,0 +1,84 @@
+@font-face {
+    font-family: titleLight;
+    src: url('./font/Title_Light.otf');
+  }
+  @font-face {
+    font-family: titleMedium;
+    src: url('./font/Title_Medium.otf');
+  }
+  @font-face {
+    font-family: Batang_Bold;
+    src: url('./font/woff/Batang_Bold.woff');
+  }
+  @font-face {
+    font-family: Batang_Regular;
+    src: url('./font/woff/Batang_Regular.woff');
+  }
+  @font-face {
+    font-family: Title_Light;
+    src: url('./font/woff/Title_Light.woff');
+  }
+  @font-face {
+    font-family: Title_Medium;
+    src: url('./font/woff/Title_Medium.woff');
+  }
+  @font-face {
+    font-family: TitleV;
+    src: url('./font/woff/TitleV.woff');
+  }
+#a{
+    font-family: titleLight;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+
+}
+#b{
+    font-family: titleMedium;
+   
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+}
+#c{
+    font-family: Batang_Regular;
+  
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+}
+#d{
+    font-family: Title_Bold;
+    font-family: titleLight;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+}
+#e{
+    font-family: Title_Light;
+  
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+}
+#f{
+    font-family: Title_Medium;
+   
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+}
+#g{
+    font-family: TitleV;
+  
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+}
