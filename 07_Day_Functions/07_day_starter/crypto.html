@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá Tiền Điện Tử</title>
+</head>
+<body>
+
+    <input type="text" id="cryptoSymbol" placeholder="Nhập mã tiền điện tử">
+    <button onclick="getCryptoPrice()">Cờ lick</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function fetchData(symbol) {
+            try { 
+                // Gọi API Binance với mã tiền điện tử
+                let response = await fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${symbol.toUpperCase()}USDT`);
+                
+                // Kiểm tra nếu mã không hợp lệ
+                if (!response.ok) {
+                    throw new Error("Mã tiền điện tử không hợp lệ hoặc không được hỗ trợ.");
+                }
+
+                let data  = await response.json();
+                // Hiển thị kết quả lên trang web
+                document.getElementById("result").innerText = `Giá của ${symbol.toUpperCase()}/USDT: ${data.price} USDT`;
+            } catch (error) {
+                // Hiển thị lỗi lên trang web
+                document.getElementById("result").innerText = "Lỗi dữ liệu: " + error.message;
+            }
+        }
+
+        function getCryptoPrice() {
+            // Lấy mã tiền điện tử từ ô nhập
+            let cryptoSymbol = document.getElementById("cryptoSymbol").value;
+            
+            if (cryptoSymbol) {
+                fetchData(cryptoSymbol);
+            } else {
+                document.getElementById("result").innerText = "Bạn chưa nhập mã tiền điện tử.";
+            }
+        }
+    </script>
+
+</body>
+</html>

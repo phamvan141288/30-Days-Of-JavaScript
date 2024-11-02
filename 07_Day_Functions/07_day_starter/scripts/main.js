@@ -110,62 +110,133 @@
 // }
 // console.log(quadraticResult(0,1,2))
 // Hàm gọi thời gian
-function showDateTime (){
-    let currentDate = new Date();
-    console.log(currentDate);
-}
-showDateTime();
+// function showDateTime (){
+//     let currentDate = new Date();
+//     console.log(currentDate);
+// }
+// showDateTime();
 
-// Hoán đổi giá trị gắn vào
- function swapValues (x, y){
-    // x === y; đây là toán tử so sánh, phải dùng phép toán tử gắn giá trị
-    // y === x;
-    // console.log(x,y)
+// // Hoán đổi giá trị gắn vào
+//  function swapValues (x, y){
+//     // x === y; đây là toán tử so sánh, phải dùng phép toán tử gắn giá trị
+//     // y === x;
+//     // console.log(x,y)
 
-    let temp = x;
-    x = y;
-    y = temp;
-    console.log(x, y);
- }
-swapValues(1,2)
+//     let temp = x;
+//     x = y;
+//     y = temp;
+//     console.log(x, y);
+//  }
+// swapValues(1,2)
 
 // Gọi ngược từ 3 về 1
-function reverseArray(array) {
-    let reversedArray = [];
+// function reverseArray(array) {
+//     let reversedArray = [];
     
-    for (let i = array.length - 1; i >= 0; i--) {
-        reversedArray.push(array[i]);
-    }
+//     for (let i = array.length - 1; i >= 0; i--) {
+//         reversedArray.push(array[i]);
+//     }
     
-    return reversedArray;
-}
-console.log(reverseArray([1,2,3]));
+//     return reversedArray;
+// }
+// console.log(reverseArray([1,2,3]));
 
 // Gọi ngược từ D về A
-let array1 = ['A', 'B', 'C', 'D'];
-function ReverseAlphabetic1 (array1){
-    let ReversedAphabetic1 = [];
-    for( let i = array1.length - 1 ; i >= 0; i--){
-        ReversedAphabetic1.push(array1[i]);
-    }
-    console.log(ReversedAphabetic1);
-}
-ReverseAlphabetic1(array1);
+// let array1 = ['A', 'B', 'C', 'D'];
+// function ReverseAlphabetic1 (array1){
+//     let ReversedAphabetic1 = [];
+//     for( let i = array1.length - 1 ; i >= 0; i--){
+//         ReversedAphabetic1.push(array1[i]);
+//     }
+//     console.log(ReversedAphabetic1);
+// }
+// ReverseAlphabetic1(array1);
 
-let array = ['A', 'B', 'C', 'D'];
+// In kết quả ngược về chữ cái
 
-function ReverseAlphabetic(array) {
-    let ReversedAlphabetic = [];
-    for (let i = array.length - 1; i >= 0; i--) {
-        ReversedAlphabetic.push(array[i]);
-    }
-    return ReversedAlphabetic; // Trả về mảng đã đảo ngược
-}
+// let array = ['A', 'B', 'C', 'D'];
+
+// function ReverseAlphabetic(array) {
+//     let ReversedAlphabetic = [];
+//     for (let i = array.length - 1; i >= 0; i--) {
+//         ReversedAlphabetic.push(array[i]);
+//     }
+//     return ReversedAlphabetic; // Trả về mảng đã đảo ngược
+// }
+
+// let ReverseAlphabetic = (array)=>{
+//     let ReversedAlphabetic = [];
+//     for( let i = array.length-1; i >= 0; i--){
+//         ReversedAlphabetic.push(array[i]);
+//     }
+//     return ReversedAlphabetic;
+// }
+// console.log(ReverseAlphabetic(array));
 
 // In kết quả đã đảo ngược ra ngoài hàm
-console.log(ReverseAlphabetic(array)); // Kết quả: ['D', 'C', 'B', 'A']
+// console.log(ReverseAlphabetic(array)); // Kết quả: ['D', 'C', 'B', 'A']
 
 /*
 Đã khai hàm return tên biến được khai mới trong hàm thì khi ra ngoài hàm phải dùng hàm console.log trả về tên hàm
 Đã khai console.log tên biến được khai mới trong hàm thì ra ngoài thì chỉ trả về tên hàm
 */
+
+// async function getETCPrice() {
+//     try {
+//         // Gọi API của CoinGecko để lấy giá ETC
+//         const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum-classic&vs_currencies=usd');
+//         const data = await response.json();
+
+//         // Truy cập giá ETC bằng USD
+//         const etcPrice = data['ethereum-classic'].usd;
+//         console.log(`Giá Ethereum Classic (ETC): $${etcPrice} USD`);
+//     } catch (error) {
+//         console.error("Có lỗi xảy ra khi gọi API:", error);
+//     }
+// }
+
+// getETCPrice();
+
+// async function fetchData () {
+//      try { 
+//         let response = await fetch(`https://data.binance.com/api/v3/ticker/price?symbol=USDT`);
+//         // let response = await fetchData('https://api.binance.com/api/v3/ticker/price?symbol=ALTUSDT');
+//         let data  = await response.json();
+//         console.log(data);
+//      } catch (error) {
+//         console.error("lỗi dữ liệu: ", error)
+//      }
+//     }
+// let cryptoSymbol = prompt("Nhập mã tiền điện tử (ví dụ: alt): ")
+//     if (cryptoSymbol === 'alt'){
+//         fetchData(cryptoSymbol)
+//     } else {
+//         fetchData(`bạn không nhập đúng`)
+//     }
+
+    // async function fetchData(symbol) {
+    //     try { 
+    //         // Tạo URL động bằng cách ghép symbol với USDT
+    //         let response = await fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${symbol.toUpperCase()}USDT`);
+            
+    //         // Kiểm tra nếu API trả về mã lỗi, có thể do symbol không hợp lệ
+    //         if (!response.ok) {
+    //             throw new Error("Mã tiền điện tử không hợp lệ hoặc không được hỗ trợ.");
+    //         }
+    
+    //         let data  = await response.json();
+    //         console.log(`Giá của ${symbol.toUpperCase()}/USDT: ${data.price} USDT`);
+    //     } catch (error) {
+    //         console.error("Tên của đồng coin không chính xác: ", error.message);
+    //     }
+    // }
+    
+    // let cryptoSymbol = prompt("Nhập mã tiền điện tử (ví dụ: alt): ");
+    // if (cryptoSymbol) {
+    //     fetchData(cryptoSymbol);
+    // } else {
+    //     console.log("Bạn chưa nhập mã tiền điện tử.");
+    // }
+
+
+    
