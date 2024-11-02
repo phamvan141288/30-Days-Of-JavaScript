@@ -69,18 +69,18 @@
 // x = (3y-5)2
 
 //  */\
-function solveLinEquation(a, b, c, x) {
-    // Check if b is 0 to avoid division by zero
-    if (b === 0) {
-        return "No solution for y when b is 0 (vertical line).";
-    }
+// function solveLinEquation(a, b, c, x) {
+//     // Check if b is 0 to avoid division by zero
+//     if (b === 0) {
+//         return "No solution for y when b is 0 (vertical line).";
+//     }
 
-    // Calculate y based on the linear equation formula
-    let y = (-a * x - c) / b;
-    return y;
-}
+//     // Calculate y based on the linear equation formula
+//     let y = (-a * x - c) / b;
+//     return y;
+// }
 
-console.log(solveLinEquation(1,-1,3,1))
+// console.log(solveLinEquation(1,-1,3,1))
 
 
 // Example usage:
@@ -109,13 +109,14 @@ console.log(solveLinEquation(1,-1,3,1))
 //     // } 
 // }
 // console.log(quadraticResult(0,1,2))
-// function showDateTime (){
-//     let currentDate = new Date(length-7);
-//     return currentDate;
-// }
-// console.log(showDateTime())
+// Hàm gọi thời gian
+function showDateTime (){
+    let currentDate = new Date();
+    console.log(currentDate);
+}
+showDateTime();
 
-// Declare a function name _swapValues_. This function swaps value of x to y.
+// Hoán đổi giá trị gắn vào
  function swapValues (x, y){
     // x === y; đây là toán tử so sánh, phải dùng phép toán tử gắn giá trị
     // y === x;
@@ -128,6 +129,7 @@ console.log(solveLinEquation(1,-1,3,1))
  }
 swapValues(1,2)
 
+// Gọi ngược từ 3 về 1
 function reverseArray(array) {
     let reversedArray = [];
     
@@ -137,6 +139,33 @@ function reverseArray(array) {
     
     return reversedArray;
 }
+console.log(reverseArray([1,2,3]));
 
-// Example usage
-console.log(reverseArray());
+// Gọi ngược từ D về A
+let array1 = ['A', 'B', 'C', 'D'];
+function ReverseAlphabetic1 (array1){
+    let ReversedAphabetic1 = [];
+    for( let i = array1.length - 1 ; i >= 0; i--){
+        ReversedAphabetic1.push(array1[i]);
+    }
+    console.log(ReversedAphabetic1);
+}
+ReverseAlphabetic1(array1);
+
+let array = ['A', 'B', 'C', 'D'];
+
+function ReverseAlphabetic(array) {
+    let ReversedAlphabetic = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        ReversedAlphabetic.push(array[i]);
+    }
+    return ReversedAlphabetic; // Trả về mảng đã đảo ngược
+}
+
+// In kết quả đã đảo ngược ra ngoài hàm
+console.log(ReverseAlphabetic(array)); // Kết quả: ['D', 'C', 'B', 'A']
+
+/*
+Đã khai hàm return tên biến được khai mới trong hàm thì khi ra ngoài hàm phải dùng hàm console.log trả về tên hàm
+Đã khai console.log tên biến được khai mới trong hàm thì ra ngoài thì chỉ trả về tên hàm
+*/
