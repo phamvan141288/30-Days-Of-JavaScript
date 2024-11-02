@@ -80,6 +80,63 @@ function solveLinEquation(a, b, c, x) {
     return y;
 }
 
+console.log(solveLinEquation(1,-1,3,1))
+
+
 // Example usage:
-let a = 2, b = 3, c = 5, x = 1;
-console.log(solveLinEquation(a, b, c, x)); // Outputs the value of y for the given x
+// let a = 2, b = 0, c = 5, x = 4;
+// console.log(solveLinEquation(a, b, c, x)); // Outputs the value of y for the given x
+
+/**
+  Quadratic equation is calculated as follows: _ax2 + bx + c = 0_.
+   Write a function which calculates value or values of a quadratic equation, _solveQuadEquation_.
+ */
+// Phương trình bậc 2 thì phải giải bằng tính nghiệm Delta Δ ( < 0; = 0 ; > 0)
+// Tính Δ=b2-4ac
+// function quadraticResult(a, b, c) {
+//     if( a !== 0){
+//         return "Phương trình không có nghiệm khi a !== 0";
+//     } 
+//     if( a < 0){
+//         return "Phương trình vô nghiệm khi a < 0";
+//     } 
+//     if( a === 0){
+//         let Δ = b*b - 4*a*c
+//         return Δ;
+//     } 
+//     // if( a > 0){
+//     //     return "Phuong trinh khong co nghiem khi a = 0";
+//     // } 
+// }
+// console.log(quadraticResult(0,1,2))
+// function showDateTime (){
+//     let currentDate = new Date(length-7);
+//     return currentDate;
+// }
+// console.log(showDateTime())
+
+// Declare a function name _swapValues_. This function swaps value of x to y.
+ function swapValues (x, y){
+    // x === y; đây là toán tử so sánh, phải dùng phép toán tử gắn giá trị
+    // y === x;
+    // console.log(x,y)
+
+    let temp = x;
+    x = y;
+    y = temp;
+    console.log(x, y);
+ }
+swapValues(1,2)
+
+function reverseArray(array) {
+    let reversedArray = [];
+    
+    for (let i = array.length - 1; i >= 0; i--) {
+        reversedArray.push(array[i]);
+    }
+    
+    return reversedArray;
+}
+
+// Example usage
+console.log(reverseArray());
