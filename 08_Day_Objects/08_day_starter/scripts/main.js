@@ -133,38 +133,137 @@
 // console.log(values);
 
 
-const countries = {
-  Finland: 'Helsinki',
-  Estonia: 'Tallinn',
-  Denmark: 'Copenhagen',
-  Sweden: 'Stockholm',
-  Norway: 'Oslo',
-  Iceland: 'Reykjavík'
+// const countries = {
+//   Finland: 'Helsinki',
+//   Estonia: 'Tallinn',
+//   Denmark: 'Copenhagen',
+//   Sweden: 'Stockholm',
+//   Norway: 'Oslo',
+//   Iceland: 'Reykjavík'
+// }
+
+// // for (let country in countries) {
+// //   console.log(country);
+// // }    
+
+// const keys = Object.keys(countries);
+// const values = Object.values(countries);
+// for (let i = 0; i < keys.length; i++) {
+//   console.log(`${keys[i]} is the capital of ${values[i]}`);
+// }
+// function signUp(username, email, password) {
+//   // Kiểm tra nếu email hoặc username đã tồn tại
+//   const userExists = users.some(user => user.email === email || user.username === username);
+  
+//   if (userExists) {
+//       return 'You already have an account.';
+//   }
+
+//   // Tạo thông tin người dùng mới
+//   const newUser = {
+//       id: Math.random().toString(36).substr(2, 6), // Tạo ID ngẫu nhiên
+//       username,
+//       email,
+//       password,
+//       createdAt: new Date().toLocaleString(), // Thời gian hiện tại
+//       isLoggedIn: false
+//   };
+
+//   // Thêm vào danh sách `users`
+//   users.push(newUser);
+
+//   return 'Sign-up successful! Welcome to the platform.';
+// }
+
+
+
+const users = [
+{
+    id: 'ab12ex',
+    username: 'Alex',
+    email: 'alex@alex.com',
+    password: '123123',
+    createdAt:'08/01/2020 9:00 AM',
+    isLoggedIn: false
+},
+{
+    id: 'fg12cy',
+    username: 'Asab',
+    email: 'asab@asab.com',
+    password: '123456',
+    createdAt:'08/01/2020 9:30 AM',
+    isLoggedIn: true
+},
+{
+    id: 'zwf8md',
+    username: 'Brook',
+    email: 'brook@brook.com',
+    password: '123111',
+    createdAt:'08/01/2020 9:45 AM',
+    isLoggedIn: true
+},
+{
+    id: 'eefamr',
+    username: 'Martha',
+    email: 'martha@martha.com',
+    password: '123222',
+    createdAt:'08/01/2020 9:50 AM',
+    isLoggedIn: false
+},
+{
+    id: 'ghderc',
+    username: 'Thomas',
+    email: 'thomas@thomas.com',
+    password: '123333',
+    createdAt:'08/01/2020 10:00 AM',
+    isLoggedIn: false
+}
+];
+function getInput() {
+  const username = prompt("Nhập tên người dùng:") || '';
+  const email = prompt("Nhập địa chỉ email:") || '';
+  const password = prompt("Nhập mật khẩu:") || '';
+  return { username, email, password };
 }
 
-// for (let country in countries) {
-//   console.log(country);
-// }    
-
-const keys = Object.keys(countries);
-const values = Object.values(countries);
-for (let i = 0; i < keys.length; i++) {
-  console.log(`${keys[i]} is the capital of ${values[i]}`);
+function validateInput(username, email, password) {
+  if (!username || !email || !password) {
+      return "Vui lòng nhập đầy đủ thông tin.";
+  }
+  // Add more validation as needed (e.g., email format, password strength)
+  return null; // No error
 }
 
+function signUp(username, email, password) {
+  const validationError = validateInput(username, email, password);
+  if (validationError) {
+      return validationError;
+  }
 
+  const userExists = users.some(user => user.email === email || user.username === username);
+  
+  if (userExists) {
+      return 'Tài khoản đã tồn tại.';
+  }
 
+  const newUser = {
+      _id: Date.now().toString(36) + Math.random().toString(36).substr(2),
+      username,
+      email,
+      password, // In a real app, hash this password
+      createdAt: new Date().toLocaleString(),
+      isLoggedIn: false
+  };
 
+  users.push(newUser);
 
+  return 'Đăng ký thành công! Chào mừng bạn đến với nền tảng của chúng tôi.';
+}
 
+function runSignUp() {
+  const { username, email, password } = getInput();
+  const result = signUp(username, email, password);
+  console.log(result);
+}
 
-
-
-
-/**
-1. Find people who are MERN stack developer from the users object
-1. Set your name in the users object without modifying the original users object
-1. Get all keys or properties of users object
-1. Get all the values of users object
-1. Use the countries object to print a country name, capital, populations and languages.
- */
+runSignUp();
